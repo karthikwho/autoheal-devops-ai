@@ -10,6 +10,11 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+*.egg-info/
+
+# Local AutoHeal data (JSONL store)
+.autoheal-data/
+data/
 
 # JavaScript
 node_modules/

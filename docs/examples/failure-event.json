@@ -1,0 +1,13 @@
+{
+  "incident_id": "inc-20261008-ab12cd",
+  "repository": "karthikwho/autoheal-devops-ai",
+  "commit_sha": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0",
+  "workflow_name": "ci",
+  "run_id": 123456789,
+  "failed_step": "pytest",
+  "failure_type": "test_failure",
+  "logs": "Run actions/checkout@v4\nRun pip install -e '.[dev]'\nFAILED tests/test_login.py::test_login_timeout - AssertionError: expected 200 got 500\n1 failed, 41 passed in 12.31s",
+  "timestamp": "2026-10-08T09:14:22Z",
+  "branch": "main",
+  "pull_request_number": 7
+}
