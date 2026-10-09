@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version >= '3.12' and sys_platform == 'emscripten'",
@@ -11,6 +11,7 @@ members = [
     "autoheal-api",
     "autoheal-contracts",
     "autoheal-devops-ai",
+    "autoheal-diagnosis",
 ]
 
 [[package]]
@@ -89,6 +90,7 @@ source = { virtual = "." }
 dev = [
     { name = "autoheal-api" },
     { name = "autoheal-contracts" },
+    { name = "autoheal-diagnosis" },
     { name = "httpx2" },
     { name = "pytest" },
     { name = "ruff" },
@@ -100,10 +102,22 @@ dev = [
 dev = [
     { name = "autoheal-api", editable = "apps/api" },
     { name = "autoheal-contracts", editable = "packages/contracts" },
+    { name = "autoheal-diagnosis", editable = "packages/diagnosis" },
     { name = "httpx2", specifier = ">=2.0" },
     { name = "pytest", specifier = ">=8.0" },
     { name = "ruff", specifier = ">=0.6" },
 ]
+
+[[package]]
+name = "autoheal-diagnosis"
+version = "0.1.0"
+source = { editable = "packages/diagnosis" }
+dependencies = [
+    { name = "autoheal-contracts" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "autoheal-contracts", editable = "packages/contracts" }]
 
 [[package]]
 name = "click"

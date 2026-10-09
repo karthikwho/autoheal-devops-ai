@@ -12,11 +12,13 @@ members = ["packages/*", "apps/*"]
 [tool.uv.sources]
 autoheal-contracts = { workspace = true }
 autoheal-api = { workspace = true }
+autoheal-diagnosis = { workspace = true }
 
 [dependency-groups]
 dev = [
     "autoheal-contracts",
     "autoheal-api",
+    "autoheal-diagnosis",
     "httpx2>=2.0",
     "pytest>=8.0",
     "ruff>=0.6",
@@ -29,6 +31,7 @@ addopts = "-ra --strict-markers"
 markers = [
     "contracts: contract model validation tests",
     "api: FastAPI endpoint tests",
+    "diagnosis: deterministic and optional-LLM diagnosis engine tests",
 ]
 
 [tool.ruff]
